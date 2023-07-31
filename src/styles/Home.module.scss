@@ -1,0 +1,106 @@
+@import "./mixins/flex";
+
+.homeNavigationBtn {
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+
+  h2 {
+    font-weight: 600;
+  }
+
+  span {
+    display: inline-block;
+    transition: transform 200ms;
+  }
+
+  &:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+    span {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.homeContentContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.homeTitleContainer {
+  @include flexRowCenterCenter;
+  flex-wrap: wrap;
+  gap: 1rem;
+  @media screen and (max-width: 414px) {
+    position: relative;
+  }
+}
+
+.homeTitleContainer::before {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 480px;
+  height: 360px;
+  margin-left: -400px;
+  z-index: -1;
+}
+
+.homeTitleContainer::after {
+  background: var(--primary-glow);
+  width: 240px;
+  height: 180px;
+  z-index: -1;
+}
+
+.homeTitleContainer::before,
+.homeTitleContainer::after {
+  content: "";
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}
+
+.homeSubtitleContainer {
+  @include flexRowCenterCenter;
+  gap: 0.8rem;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .homeNavigationBtn:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .homeNavigationBtn:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .homeNavigationBtn:hover span {
+    transform: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

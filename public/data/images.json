@@ -1,0 +1,22 @@
+[
+  {
+    "value": "/images/1-mysterious-warriors.png",
+    "alt": "Some storm troopers from star wars",
+    "label": "Mysterious Warriors"
+  },
+  {
+    "value": "/images/2-elephant-pink.png",
+    "alt": "pink elephants",
+    "label": "Pink Elephant"
+  },
+  {
+    "value": "/images/3-icescream.png",
+    "alt": "multicolor ice creams",
+    "label": "Ice creams"
+  },
+  {
+    "value": "/images/4-fox.png",
+    "alt": "foxes",
+    "label": "Foxes"
+  }
+]

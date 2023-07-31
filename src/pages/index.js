@@ -13,7 +13,7 @@ export default function Home() {
         <title>Welcome to Image Zoomer</title>
         <meta name="description" content="Image Zoomer next app home page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.homeContentContainer}>
         <div className={styles.homeTitleContainer}>

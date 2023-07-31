@@ -9,7 +9,9 @@ export function RootLayout({ children }) {
   return (
     <div className={`${inter.className} ${styles.pageContainer}`}>
       <Header />
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main}>
+        <div className={styles.contentContainer}>{children}</div>
+      </main>
     </div>
   );
 }

@@ -16,3 +16,39 @@
     height: calc(100vh - $headerHeightLg);
   }
 }
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  @media screen and (max-width: 414px) {
+    position: relative;
+  }
+}
+
+.contentContainer::before {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 480px;
+  height: 360px;
+  margin-left: -400px;
+  z-index: -1;
+}
+
+.contentContainer::after {
+  background: var(--primary-glow);
+  width: 240px;
+  height: 180px;
+  z-index: -1;
+}
+
+.contentContainer::before,
+.contentContainer::after {
+  content: "";
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}

@@ -1,0 +1,13 @@
+@import "../../styles/mixins/flex";
+@import "../../styles/variables";
+
+.header {
+  @include flexRowBetweenCenter;
+  width: 100%;
+  padding: 2rem;
+  height: $headerHeightSm;
+  @media screen and (min-width: 768px) {
+    padding: 3rem 20%;
+    height: $headerHeightLg;
+  }
+}

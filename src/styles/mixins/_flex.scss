@@ -3,8 +3,13 @@
   flex-direction: row;
 }
 @mixin flexRowBetweenCenter {
-  display: flex;
-  flex-direction: row;
+  @include flexRowBase;
   justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexRowCenterCenter {
+  @include flexRowBase;
+  justify-content: center;
   align-items: center;
 }

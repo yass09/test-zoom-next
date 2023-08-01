@@ -18,13 +18,18 @@ export const ImageSelector = ({ imageListOptions }) => {
         id="images"
         onChangeHandler={onChangeHandler}
       />
-      {currentValue && (
+      {currentValue ? (
         <Link
           href={`/${getSlugFromImagePath(currentValue)}`}
           className={styles.imageLink}
+          aria-disabled={!currentValue}
         >
           Go to image
         </Link>
+      ) : (
+        <button className={styles.imageLink} disabled>
+          Go to image
+        </button>
       )}
     </>
   );

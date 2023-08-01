@@ -7,7 +7,7 @@ export const Select = ({ options, onChangeHandler, label, id }) => {
     <>
       {label && <label htmlFor={id}>{label}</label>}
       <div className={styles.selectContainer}>
-        <select name={id} id={id} onChange={onChangeHandler}>
+        <select name={id} id={id} onChange={onChangeHandler} autocomplete="off">
           {options.map(({ value, label, selected, disabled }) => (
             <option
               value={value || label}

@@ -1,6 +1,13 @@
 .imageLink {
-  background: rgba(var(--card-rgb), 0.1);
+  background: rgba(var(--card-rgb), 0.5);
   border: 1px solid rgba(var(--card-border-rgb), 0.15);
   border-radius: var(--border-radius);
   padding: 1rem 1.2rem;
+  font-size: 16px;
+  font-family: inherit;
+  transition: background 0.5s ease-in;
+
+  &:disabled {
+    background: rgba(var(--card-rgb), 0.1);
+  }
 }

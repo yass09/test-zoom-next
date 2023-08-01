@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { ImageSelector } from "../../components/ImageSelector/ImageSelector";
+import data from "../../../public/data/images.json";
 
 export default function ImagesList({ imagesListOptions }) {
   return (
@@ -17,8 +18,8 @@ export default function ImagesList({ imagesListOptions }) {
 }
 
 export async function getStaticProps() {
-  const req = await fetch("http://127.0.0.1:3000/data/images.json");
-  const data = await req.json();
+  // const req = await fetch("http://127.0.0.1:3000/data/images.json");
+  // const data = await req.json();
 
   // add placeholder option to select options
   data.unshift({

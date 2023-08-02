@@ -16,7 +16,6 @@ export default function Image({ imageData } = null) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      {imageData && <div>{JSON.stringify(imageData)}</div>}
       <ImageViewer imageData={imageData} />
     </>
   );

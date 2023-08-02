@@ -35,12 +35,12 @@ export const ImageViewer = ({ imageData }) => {
   return (
     <>
       <h1 className="pageTitle">{label}</h1>
+      <ImageViewerCursor
+        position={cursorPosition}
+        backgroundSrc={src}
+        backgroundPosition={cursorBackgroundPosition}
+      />
       <div className={styles.imageContainer}>
-        <ImageViewerCursor
-          position={cursorPosition}
-          backgroundSrc={src}
-          backgroundPosition={cursorBackgroundPosition}
-        />
         <Image src={src} alt={alt} fill ref={imageRef} />
       </div>
     </>

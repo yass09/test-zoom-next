@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { getSlugFromImagePath } from "../../helpers/slug.helper";
 import data from "../../../public/data/images.json";
 import { ImageViewer } from "../../components/ImageViewer/ImageViewer";
+import { BackButton } from "../../components/BackButton/BackButton";
+import styles from "../../styles/Layout.module.scss";
 
 export default function Image({ imageData } = null) {
   const router = useRouter();
@@ -16,6 +18,9 @@ export default function Image({ imageData } = null) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <div className={styles.pageNavigationContainer}>
+        <BackButton path="/images" />
+      </div>
       <ImageViewer imageData={imageData} />
     </>
   );

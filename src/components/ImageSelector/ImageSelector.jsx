@@ -20,7 +20,7 @@ export const ImageSelector = ({ imageListOptions }) => {
       />
       {currentValue ? (
         <Link
-          href={`/${getSlugFromImagePath(currentValue)}`}
+          href={`/images/${getSlugFromImagePath(currentValue)}`}
           className={styles.imageLink}
           aria-disabled={!currentValue}
         >
@@ -28,7 +28,7 @@ export const ImageSelector = ({ imageListOptions }) => {
         </Link>
       ) : (
         <button className={styles.imageLink} disabled>
-          Go to image
+          Show image
         </button>
       )}
     </>

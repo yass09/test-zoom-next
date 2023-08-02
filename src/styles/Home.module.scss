@@ -6,6 +6,7 @@
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  margin-top: 2rem;
 
   h2 {
     font-weight: 600;
@@ -46,13 +47,14 @@
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  .homeNavigationBtn:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .homeNavigationBtn:hover span {
-    transform: translateX(4px);
+  .homeNavigationBtn {
+    &:hover {
+      background: rgba(var(--card-rgb), 0.1);
+      border: 1px solid rgba(var(--card-border-rgb), 0.15);
+      span {
+        transform: translateX(4px);
+      }
+    }
   }
 }
 

@@ -2,21 +2,25 @@
   {
     "value": "/images/1-mysterious-warriors.png",
     "alt": "Some storm troopers from star wars",
-    "label": "Mysterious Warriors"
+    "label": "Mysterious Warriors",
+    "path": "1-mysterious-warriors"
   },
   {
     "value": "/images/2-elephant-pink.png",
     "alt": "pink elephants",
-    "label": "Pink Elephant"
+    "label": "Pink Elephant",
+    "path": "2-elephant-pink"
   },
   {
     "value": "/images/3-icescream.png",
     "alt": "multicolor ice creams",
-    "label": "Ice creams"
+    "label": "Ice creams",
+    "path": "3-icescream"
   },
   {
     "value": "/images/4-fox.png",
     "alt": "foxes",
-    "label": "Foxes"
+    "label": "Foxes",
+    "path": "4-fox"
   }
 ]

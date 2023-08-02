@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { ImageSelector } from "../../components/ImageSelector/ImageSelector";
 import data from "../../../public/data/images.json";
+import { getSlugFromImagePath } from "../../helpers/slug.helper";
 
 export default function ImagesList({ imagesListOptions }) {
   return (
@@ -18,11 +19,28 @@ export default function ImagesList({ imagesListOptions }) {
 }
 
 export async function getStaticProps() {
-  // add placeholder option to select options
-  data.unshift({
-    label: "Select an image",
-    selected: true,
-    disabled: true,
+  data.forEach((item) => {
+    console.log("🚀 --------------------------------------------------🚀");
+    console.log("🚀 ~ file: index.js:24 ~ data.forEach ~ item:", item);
+    console.log("🚀 --------------------------------------------------🚀");
+
+    console.log(
+      "🚀 ------------------------------------------------------------------------------------------------------------🚀"
+    );
+    console.log(
+      "🚀 ~ file: index.js:30 ~ getStaticProps ~ getSlugFromImagePath(item.value):",
+      getSlugFromImagePath(item.value)
+    );
+    console.log(
+      "🚀 ------------------------------------------------------------------------------------------------------------🚀"
+    );
+    // add placeholder option to select options
+    data.unshift({
+      label: "Select an image",
+      value: "Select an image",
+      selected: true,
+      disabled: true,
+    });
   });
 
   return { props: { imagesListOptions: data } };
